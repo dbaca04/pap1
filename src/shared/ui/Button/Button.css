@@ -1,0 +1,30 @@
+/* Button component styles */
+/* Note: Most styles are handled by Tailwind classes in the component */
+
+/* Animation for the loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Focus styles for better accessibility */
+button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #3b82f6;
+}
+
+/* Disabled state */
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Loading state */
+button .loading {
+  display: inline-flex;
+  align-items: center;
+}
